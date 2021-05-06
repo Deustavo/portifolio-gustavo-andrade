@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 html,
-body {
+body, p {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -14,3 +14,75 @@ a {
 * {
   box-sizing: border-box;
 }
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.backgound-page {
+  background-color: #000;
+  min-height: 100vh;
+  min-width: 100vw;
+  color: #fff;
+}
+
+.header {
+  font-family: 'Anton', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+  position: fixed;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all ease-in-out 300ms;
+}
+
+@keyframes onLoadName {
+  0% { padding-right: 10vw }
+  40% { padding-right: 1px }
+  70% { padding-right: 16px }
+  100% { padding-right: 12px; color: #fff; }
+}
+
+.enterprise-name {
+  font-family: 'Anton', sans-serif;
+  color: #000;
+  font-weight: bold;
+  font-size: 200px;
+  height: 214px;
+  transition: all ease-in-out 300ms;
+  animation: onLoadName 900ms forwards;
+}
+
+.second-name {
+  font-size: 194px !important;
+  animation-delay: 200ms;
+}
+
+.row-projects {
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  background: #fff;
+  width: 20vw;
+  height: 20vw;
+  margin-bottom: 3vw;
+  transition: ease-in-out all 300ms;
+}
+
+
+@media only screen and (max-width: 864px) {
+  .enterprise-name { font-size: 100px; height: 100px; }
+  .second-name { font-size: 98px !important }
+  /* .row-projects { flex-direction: column } */
+  .project-card { height: 40vw; width: 40vw; }
+}
+
+
+.display-flex { display: flex; }
+.margin-page { padding-left: 5vw; padding-right: 5vw }
