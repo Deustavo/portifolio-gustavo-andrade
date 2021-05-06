@@ -30,7 +30,7 @@ function LandingPage() {
         </div>
       </div>
 
-      <div style={{padding: '80px 0 64px 0'}}>
+      <div style={{padding: '100px 0 64px 0'}}>
         <div className="margin-page display-flex">
           <p className="enterprise-name">G</p>
           <p className="enterprise-name">U</p>

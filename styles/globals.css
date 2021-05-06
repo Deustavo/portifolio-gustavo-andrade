@@ -80,7 +80,12 @@ a {
   .enterprise-name { font-size: 100px; height: 100px; }
   .second-name { font-size: 98px !important }
   /* .row-projects { flex-direction: column } */
-  .project-card { height: 40vw; width: 40vw; }
+  .project-card { height: 43.5vw; width: 43.5vw; }
+}
+
+@media only screen and (max-width: 450px) {
+  .enterprise-name { font-size: 50px; height: 50px; }
+  .second-name { font-size: 48px !important }
 }
 
 
