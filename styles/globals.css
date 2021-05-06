@@ -68,12 +68,25 @@ a {
 }
 
 .project-card {
+  font-family: 'Anton', sans-serif;
   background: #fff;
   width: 20vw;
   height: 20vw;
   margin-bottom: 3vw;
   transition: ease-in-out all 300ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.project-card img {
+  height: 20vw;
+  width: 20vw;
+  position: absolute;
+  transition: ease-in-out all 300ms;
+}
+
+.project-card img:hover { opacity: 0 }
 
 
 @media only screen and (max-width: 864px) {
@@ -81,6 +94,7 @@ a {
   .second-name { font-size: 98px !important }
   /* .row-projects { flex-direction: column } */
   .project-card { height: 43.5vw; width: 43.5vw; }
+  .project-card img { height: 43.5vw; width: 43.5vw; }
 }
 
 @media only screen and (max-width: 450px) {

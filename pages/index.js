@@ -53,10 +53,22 @@ function LandingPage() {
 
       <div className="list-all-projects margin-page">
         <div className="row-projects">
-          <div className="project-card">project 1</div>
-          <div className="project-card">project 2</div>
-          <div className="project-card">project 3</div>
-          <div className="project-card">project 4</div>
+          <div className="project-card">
+            <img src="./img/solidty.png"/>
+            <p>Solidty Bank</p>
+          </div>
+          <div className="project-card">
+            <img src="./img/solidty.png"/>
+            <p>Solidty Bank</p>
+          </div>
+          <div className="project-card">
+            <img src="./img/solidty.png"/>
+            <p>Solidty Bank</p>
+          </div>
+          <div className="project-card">
+            <img src="./img/solidty.png"/>
+            <p>Solidty Bank</p>
+          </div>
         </div>
         <div className="row-projects">
           <div className="project-card">project 5</div>
