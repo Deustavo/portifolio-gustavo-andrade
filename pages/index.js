@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import ProjectPage from '../components/Project/ProjectPage';
+import { projects } from './api/projects';
 
 function LandingPage() {
   const [hideHeader, setHideHeader] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(false);
 
   function animationHeader() {
     let prevScrollpos = window.pageYOffset;
@@ -25,8 +28,12 @@ function LandingPage() {
       <div className="header margin-page" style={{ marginTop: hideHeader ? '-100px' : 0 }}>
         <p>Gustavo Andrade</p>
         <div className="display-flex">
-          <p style={{ marginRight: 12 }}>GITHUB</p>
-          <p>LINKEDIN</p>
+          <a target="blank_" href="https://github.com/deustavo" style={{ marginRight: 16 }}>
+            <p className="button-text">GITHUB</p>
+          </a>
+          <a target="blank_" href="https://www.linkedin.com/in/deustavo/">
+            <p className="button-text">LINKEDIN</p>
+          </a>
         </div>
       </div>
 
@@ -51,30 +58,21 @@ function LandingPage() {
         </div>
       </div>
 
+      {selectedProject}
       <div className="list-all-projects margin-page">
         <div className="row-projects">
-          <div className="project-card">
-            <img src="./img/solidty.png"/>
-            <p>Solidty Bank</p>
-          </div>
-          <div className="project-card">
-            <img src="./img/solidty.png"/>
-            <p>Solidty Bank</p>
-          </div>
-          <div className="project-card">
-            <img src="./img/solidty.png"/>
-            <p>Solidty Bank</p>
-          </div>
-          <div className="project-card">
-            <img src="./img/solidty.png"/>
-            <p>Solidty Bank</p>
-          </div>
-        </div>
-        <div className="row-projects">
-          <div className="project-card">project 5</div>
-          <div className="project-card">project 6</div>
-          <div className="project-card">project 7</div>
-          <div className="project-card">project 8</div>
+          {projects.map((project, index) =>
+            <div key={index} className={selectedProject === index ? 'selected' : ''}>
+              <div className="project-card" style={{animationDelay: `0.${index}s`}}>
+                {selectedProject === index ? <ProjectPage project={project} setSelectedProject={setSelectedProject} /> :
+                  <>
+                    <img src={project.image} onClick={() => setSelectedProject(index)}/>
+                    <p className="project-title">{project.title}</p>
+                  </>
+                }
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
