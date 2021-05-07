@@ -1,9 +1,13 @@
 import React from 'react';
 
-import styles from './styles';
+import styles from './styles.module.css';
 
 function Skillus() {
-  return <div />;
+  return (
+    <div>
+      <p>Skillus</p>
+    </div>
+  );
 }
 
 export default Skillus;

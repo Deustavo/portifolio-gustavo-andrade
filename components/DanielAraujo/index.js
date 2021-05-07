@@ -1,9 +1,13 @@
 import React from 'react';
 
-import styles from './styles';
+import styles from './styles.module.css';
 
 function DanielAraujo() {
-  return <div />;
+  return (
+    <div>
+      <p>Daniel Araujo Advocacia</p>
+    </div>
+  );
 }
 
 export default DanielAraujo;

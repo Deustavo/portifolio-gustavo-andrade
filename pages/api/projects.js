@@ -1,6 +1,6 @@
 export const projects = [
     {
-        image: "./img/solidty.png",
+        image: "./img/solidty/solidty.png",
         title: "Solidty Bank"
     },
     {
