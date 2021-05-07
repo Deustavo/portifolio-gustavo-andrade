@@ -1,17 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
-html,
-body, p {
+html, body, p {
   padding: 0;
   margin: 0;
+  font-family: 'Anton', sans-serif;
 }
 
-a {
+a, * {
   color: inherit;
   text-decoration: none;
-}
-
-* {
   box-sizing: border-box;
 }
 
@@ -25,10 +22,10 @@ a {
   min-height: 100vh;
   min-width: 100vw;
   color: #fff;
+  transition: all ease-in-out 900ms;
 }
 
 .header {
-  font-family: 'Anton', sans-serif;
   display: flex;
   justify-content: space-between;
   padding: 40px 0;
@@ -40,21 +37,21 @@ a {
 }
 
 @keyframes onLoadName {
-  0% { padding-right: 2vw; color: #000; }
+  0% { padding-right: 2vw }
   40% { padding-right: 1px }
   70% { padding-right: 16px }
-  100% { padding-right: 12px; color: #fff; }
+  100% { padding-right: 12px; ; opacity: 1; }
 }
 
 .enterprise-name {
-  font-family: 'Anton', sans-serif;
-  color: #fff;
+  color: #fff !important;
+  opacity: 0;
   font-weight: bold;
   font-size: 200px;
   height: 214px;
   padding-right: 12px;
   transition: all ease-in-out 300ms;
-  animation: onLoadName 900ms;
+  animation: onLoadName 900ms forwards;
   cursor: context-menu;
 }
 
@@ -63,10 +60,9 @@ a {
   padding-right: 24px;
 }
 
-.second-name {
-  font-size: 194px !important;
-  animation-delay: 200ms;
-}
+.second-name { font-size: 194px !important }
+
+.list-all-projects { margin-top: 80px }
 
 .row-projects {
   color: #000;
@@ -75,33 +71,24 @@ a {
   flex-wrap: wrap;
 }
 
-.selected { transition: 300ms all ease-in-out }
-.selected .project-card {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  z-index: 2;
-  transition: 300ms all ease-in-out;
-}
-
 @keyframes onLoadCard {
-  0% { margin-top: 20vw }
-  100% { margin-top: 0px }
+  0% { margin-top: 100vh }
+  100% { margin-top: 0px; opacity: 1; }
 }
 
 .project-card {
-  font-family: 'Anton', sans-serif;
   background: #fff;
+  opacity: 0;
   width: 20vw;
   height: 20vw;
   margin-bottom: 3vw;
-  transition: ease-in-out all 300ms;
+  transition: ease-in-out all 900ms;
   display: flex;
   align-items: center;
   justify-content: center;
   animation: onLoadCard 900ms forwards;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  border-radius: 4px;
 }
 
 .project-card img {
@@ -110,6 +97,7 @@ a {
   position: absolute;
   transition: ease-in-out all 300ms;
   cursor: pointer;
+  border-radius: 4px;
 }
 
 .project-card img:hover { opacity: 0.1 }

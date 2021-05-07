@@ -24,55 +24,42 @@ function LandingPage() {
   }, []);
 
   return (
-    <div className="backgound-page">
-      <div className="header margin-page" style={{ marginTop: hideHeader ? '-100px' : 0 }}>
-        <p>Gustavo Andrade</p>
-        <div className="display-flex">
-          <a target="blank_" href="https://github.com/deustavo" style={{ marginRight: 16 }}>
-            <p className="button-text">GITHUB</p>
-          </a>
-          <a target="blank_" href="https://www.linkedin.com/in/deustavo/">
-            <p className="button-text">LINKEDIN</p>
-          </a>
+    
+    <div className={selectedProject !== false ? 'project-page': ''}>
+      <div className="backgound-page">
+        <div className="header margin-page" style={{ marginTop: hideHeader ? '-100px' : 0 }}>
+          <p>Gustavo Andrade</p>
+          <div className="display-flex">
+            <a target="blank_" href="https://github.com/deustavo" style={{ marginRight: 16 }}>
+              <p className="button-text">GITHUB</p>
+            </a>
+            <a target="blank_" href="https://www.linkedin.com/in/deustavo/">
+              <p className="button-text">LINKEDIN</p>
+            </a>
+          </div>
         </div>
-      </div>
 
-      <div style={{padding: '100px 0 64px 0'}}>
-        <div className="margin-page display-flex">
-          <p className="enterprise-name">G</p>
-          <p className="enterprise-name">U</p>
-          <p className="enterprise-name">S</p>
-          <p className="enterprise-name">T</p>
-          <p className="enterprise-name">A</p>
-          <p className="enterprise-name">V</p>
-          <p className="enterprise-name">O</p>
-        </div>
-        <div className="margin-page display-flex">
-          <p className="enterprise-name second-name">A</p>
-          <p className="enterprise-name second-name">N</p>
-          <p className="enterprise-name second-name">D</p>
-          <p className="enterprise-name second-name">R</p>
-          <p className="enterprise-name second-name">A</p>
-          <p className="enterprise-name second-name">D</p>
-          <p className="enterprise-name second-name">E</p>
-        </div>
-      </div>
 
-      {selectedProject}
-      <div className="list-all-projects margin-page">
-        <div className="row-projects">
-          {projects.map((project, index) =>
-            <div key={index} className={selectedProject === index ? 'selected' : ''}>
-              <div className="project-card" style={{animationDelay: `0.${index}s`}}>
-                {selectedProject === index ? <ProjectPage project={project} setSelectedProject={setSelectedProject} /> :
-                  <>
-                    <img src={project.image} onClick={() => setSelectedProject(index)}/>
+        <div style={{padding: '100px 0 100px 0'}}>
+          {selectedProject === false ? '' : <ProjectPage project={selectedProject} setSelectedProject={setSelectedProject} />}
+
+          <div className="margin-page display-flex">
+            {['G', 'U', 'S', 'T', 'A', 'V', 'O'].map((letter, index) => <p className="enterprise-name" style={{animationDelay: `0.${index}s`}}>{letter}</p> )}
+          </div>
+          <div className="margin-page display-flex">
+            {['A', 'N', 'D', 'R', 'A', 'D', 'E'].map((letter, index) => <p className="enterprise-name second-name" style={{animationDelay: `0.${index}s`}}>{letter}</p> )}
+          </div>
+
+          <div className="list-all-projects margin-page">
+            <div className="row-projects">
+              {projects.map((project, index) =>
+                  <div key={index}div className="project-card" style={{animationDelay: `0.${index}s`}}>
+                    <img src={project.image} onClick={() => setSelectedProject(project)}/>
                     <p className="project-title">{project.title}</p>
-                  </>
-                }
-              </div>
+                  </div>
+              )}
             </div>
-          )}
+          </div>
         </div>
       </div>
     </div>

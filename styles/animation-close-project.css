@@ -1,0 +1,8 @@
+@keyframes closeProject {
+    0% { top: 0px }
+    100% { top: -100vw; opacity: 0; }
+}
+
+.close-animation .container {
+    animation: closeProject 600ms;
+}
