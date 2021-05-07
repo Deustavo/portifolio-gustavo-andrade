@@ -42,22 +42,23 @@ function LandingPage() {
 
         <div style={{padding: '100px 0 100px 0'}}>
           {selectedProject === false ? '' : <ProjectPage project={selectedProject} setSelectedProject={setSelectedProject} />}
+          <div id="landing-content">
+            <div className="margin-page display-flex">
+              {['G', 'U', 'S', 'T', 'A', 'V', 'O'].map((letter, index) => <p className="enterprise-name" style={{animationDelay: `0.${index}s`}}>{letter}</p> )}
+            </div>
+            <div className="margin-page display-flex">
+              {['A', 'N', 'D', 'R', 'A', 'D', 'E'].map((letter, index) => <p className="enterprise-name second-name" style={{animationDelay: `0.${index}s`}}>{letter}</p> )}
+            </div>
 
-          <div className="margin-page display-flex">
-            {['G', 'U', 'S', 'T', 'A', 'V', 'O'].map((letter, index) => <p className="enterprise-name" style={{animationDelay: `0.${index}s`}}>{letter}</p> )}
-          </div>
-          <div className="margin-page display-flex">
-            {['A', 'N', 'D', 'R', 'A', 'D', 'E'].map((letter, index) => <p className="enterprise-name second-name" style={{animationDelay: `0.${index}s`}}>{letter}</p> )}
-          </div>
-
-          <div className="list-all-projects margin-page">
-            <div className="row-projects">
-              {projects.map((project, index) =>
-                  <div key={index}div className="project-card" style={{animationDelay: `0.${index}s`}}>
-                    <img src={project.image} onClick={() => setSelectedProject(project)}/>
-                    <p className="project-title">{project.title}</p>
-                  </div>
-              )}
+            <div className="list-all-projects margin-page">
+              <div className="row-projects">
+                {projects.map((project, index) =>
+                    <div key={index}div className="project-card" style={{animationDelay: `0.${index}s`}}>
+                      <img src={project.image} onClick={() => { setSelectedProject(project); setTimeout(() => document.getElementById('landing-content').style.display = "none", 900 )}}/>
+                      <p className="project-title">{project.title}</p>
+                    </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
