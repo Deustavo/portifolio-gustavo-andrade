@@ -4,31 +4,15 @@ export const projects = [
         title: "Solidty Bank"
     },
     {
-        image: "./img/solidty.png",
-        title: "Solidty Bank"
+        image: "./img/skillus.png",
+        title: "Skillus"
     },
     {
-        image: "./img/solidty.png",
-        title: "Solidty Bank"
+        image: "./img/lifeguard.png",
+        title: "Life Guard"
     },
     {
-        image: "./img/solidty.png",
-        title: "Solidty Bank"
-    },
-    {
-        image: "./img/solidty.png",
-        title: "Solidty Bank"
-    },
-    {
-        image: "./img/solidty.png",
-        title: "Solidty Bank"
-    },
-    {
-        image: "./img/solidty.png",
-        title: "Solidty Bank"
-    },
-    {
-        image: "./img/solidty.png",
-        title: "Solidty Bank"
+        image: "./img/danielaraujo.png",
+        title: "Daniel Araujo Advocacia"
     },
 ]
