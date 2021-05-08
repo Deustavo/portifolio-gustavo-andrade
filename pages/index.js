@@ -12,8 +12,10 @@ function LandingPage() {
       let currentScrollPos = window.pageYOffset;
       if (prevScrollpos > currentScrollPos) {
         setHideHeader(false);
+        try { document.getElementById("header-projects").style.top = "104.8px" } catch { }
       } else {
-        setHideHeader(true)
+        setHideHeader(true);
+        try { document.getElementById("header-projects").style.top = "0px" } catch { }
       }
       prevScrollpos = currentScrollPos;
     }
@@ -28,10 +30,13 @@ function LandingPage() {
     <div className={selectedProject !== false ? 'project-page': ''}>
       <div className="backgound-page">
         <div className="header margin-page" style={{ marginTop: hideHeader ? '-100px' : 0 }}>
-          <p>Gustavo Andrade</p>
+          <p onClick={() => window.location.reload()} className="button-text">Gustavo Andrade</p>
           <div className="display-flex">
-            <a target="blank_" href="https://github.com/deustavo" style={{ marginRight: 16 }}>
+            <a target="blank_" href="https://github.com/deustavo" style={{ marginRight: 12 }}>
               <p className="button-text">GITHUB</p>
+            </a>
+            <a target="blank_" href="https://dribbble.com/Deustavo" style={{ marginRight: 12 }}>
+              <p className="button-text">DRIBBBLE</p>
             </a>
             <a target="blank_" href="https://www.linkedin.com/in/deustavo/">
               <p className="button-text">LINKEDIN</p>

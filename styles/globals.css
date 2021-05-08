@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
 
+/* TAGS INICIAIS */
 html, body, p {
   padding: 0;
   margin: 0;
@@ -12,11 +14,13 @@ a, * {
   box-sizing: border-box;
 }
 
+/* REMOVENDO SCROLLBAR */
 ::-webkit-scrollbar {
   width: 0px;
   height: 0px;
 }
 
+/* TELA INICIAL */
 .backgound-page {
   background-color: #000;
   min-height: 100vh;
@@ -105,7 +109,33 @@ a, * {
 .button-text { transition: all ease-in-out 300ms; cursor: pointer; }
 .button-text:hover { color: rgb(15, 158, 165) }
 
-.project-title { font-size: 40px; text-align: center;}
+.project-title { font-size: 40px; text-align: center; }
+
+.header-projects {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  background: #fff;
+  width: 100vw;
+  transition: all ease-in-out 300ms;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+
+/* CLASSES PRINCIPAIS */
+.display-flex { display: flex }
+.position-fixed { position: fixed }
+.align-items-center { align-items: center }
+.justfy-content-between { justify-content: space-between }
+.width-full { width: 100% }
+.margin-page { padding-left: 5vw; padding-right: 5vw }
+.margin-product-page { padding-left: 20vw; padding-right: 20vw; }
+.flex-direction-column { flex-direction: column }
+
+/* CLASSES RESPONSIVAS */
+@media only screen and (max-width: 1024px) {
+  .margin-product-page { padding-left: 5vw; padding-right: 5vw; }  
+}
 
 @media only screen and (max-width: 864px) {
   .enterprise-name { font-size: 100px; height: 100px; }
@@ -119,12 +149,5 @@ a, * {
   .enterprise-name { font-size: 50px; height: 50px; }
   .second-name { font-size: 48px !important }
   .project-title { font-size: 20px }
-  .header { font-size: 14px }
+  .header { font-size: 12px }
 }
-
-.display-flex { display: flex }
-.align-items-center { align-items: center }
-.justfy-content-between { justify-content: space-between }
-.width-full { width: 100% }
-.margin-page { padding-left: 5vw; padding-right: 5vw }
-.flex-direction-column { flex-direction: column;}

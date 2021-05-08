@@ -1,0 +1,28 @@
+.capaProduct {
+    width: 60vw;
+    margin: 0px 0 44px 0;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    border-radius: 12px;
+}
+
+.paragraph {
+    font-size: 24px;
+    margin-bottom: 40px;
+    font-family: 'Source Serif Pro', serif;
+}
+
+.creditCardImage {
+    width: 30vw;
+    float: right;
+    margin: 0 0 40px 40px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .capaProduct { width: 90vw }
+    .creditCardImage { width: 48vw }
+}
+
+
+@media only screen and (max-width: 864px) {
+    .creditCardImage { display: none; }
+}
