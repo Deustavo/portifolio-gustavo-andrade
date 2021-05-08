@@ -19,7 +19,7 @@ function LandingPage() {
       let currentScrollPos = window.pageYOffset;
       if (prevScrollpos > currentScrollPos) {
         setHideHeader(false);
-        try { document.getElementById("header-projects").style.top = "104.8px" } catch { }
+        try { document.getElementById("header-projects").style.top = "82px" } catch { }
       } else {
         setHideHeader(true);
         try { document.getElementById("header-projects").style.top = "0px" } catch { }
@@ -61,11 +61,12 @@ function LandingPage() {
         <div style={{padding: '100px 0 100px 0'}}>
           {selectedProject === false ? '' : <ProjectPage project={selectedProject} setSelectedProject={setSelectedProject} />}
           <div id="landing-content">
+            
             <div className="margin-page display-flex">
-              {['G', 'U', 'S', 'T', 'A', 'V', 'O'].map((letter, index) => <p className="enterprise-name" style={{animationDelay: `0.${index}s`}}>{letter}</p> )}
+              {['U', 'X'].map((letter, index) => <> { letter === 'space' ? <div style={{width: 64}} /> : <p className="enterprise-name" style={{animationDelay: `${index}00ms`}}>{letter}</p> }</> )}
             </div>
             <div className="margin-page display-flex">
-              {['A', 'N', 'D', 'R', 'A', 'D', 'E'].map((letter, index) => <p className="enterprise-name second-name" style={{animationDelay: `0.${index}s`}}>{letter}</p> )}
+              {['D', 'E', 'S', 'I', 'G', 'N', 'E', 'R'].map((letter, index) => <> { letter === 'space' ? <div style={{width: 64}} /> : <p className="enterprise-name" style={{animationDelay: `${index}00ms`}}>{letter}</p> }</> )}
             </div>
 
             <div className="list-all-projects margin-page">
