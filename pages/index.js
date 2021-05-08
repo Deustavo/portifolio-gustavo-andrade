@@ -6,6 +6,11 @@ function LandingPage() {
   const [hideHeader, setHideHeader] = useState(false);
   const [selectedProject, setSelectedProject] = useState(false);
 
+  function scrollToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
   function animationHeader() {
     let prevScrollpos = window.pageYOffset;
     window.onscroll = function() {
@@ -59,7 +64,7 @@ function LandingPage() {
               <div className="row-projects">
                 {projects.map((project, index) =>
                     <div key={index}div className="project-card" style={{animationDelay: `0.${index}s`}}>
-                      <img src={project.image} onClick={() => { setSelectedProject(project); setTimeout(() => document.getElementById('landing-content').style.display = "none", 900 )}}/>
+                      <img src={project.image} onClick={() => { scrollToTop(); setSelectedProject(project); setTimeout(() => document.getElementById('landing-content').style.display = "none", 900 )}}/>
                       <p className="project-title">{project.title}</p>
                     </div>
                 )}
