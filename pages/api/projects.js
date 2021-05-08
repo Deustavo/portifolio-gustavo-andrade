@@ -4,15 +4,15 @@ export const projects = [
         title: "Solidty Bank"
     },
     {
-        image: "./img/skillus.png",
+        image: "./img/skillus/skillus.png",
         title: "Skillus"
     },
     {
-        image: "./img/lifeguard.png",
+        image: "./img/lifeguard/lifeguard.png",
         title: "Life Guard"
     },
     {
-        image: "./img/danielaraujo.png",
+        image: "./img/danielaraujo/danielaraujo.png",
         title: "Daniel Araujo Advocacia"
     },
 ]

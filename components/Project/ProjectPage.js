@@ -23,7 +23,7 @@ function ProjectPage({project, setSelectedProject}) {
             <h1>{project.title}</h1>
           </div>
 
-          <div style={{marginTop: 120 }}>
+          <div className="margin-top-product-page">
             {
               project.title === "Solidty Bank" ? <Solidty setModalImageIsOpen={setModalImageIsOpen} />
               : project.title === "Skillus" ? <Skillus />

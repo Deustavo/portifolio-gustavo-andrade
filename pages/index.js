@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import Head from 'next/head';
+
 import ProjectPage from '../components/Project/ProjectPage';
 import { projects } from './api/projects';
 
@@ -33,18 +35,24 @@ function LandingPage() {
   return (
     
     <div className={selectedProject !== false ? 'project-page': ''}>
+      <Head>
+        <title>Gustavo Andrade's portfolio</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossOrigin="anonymous" />
+      </Head>
+
+
       <div className="backgound-page">
         <div className="header margin-page" style={{ marginTop: hideHeader ? '-100px' : 0 }}>
-          <p onClick={() => window.location.reload()} className="button-text">Gustavo Andrade</p>
+          <p onClick={() => window.location.reload()} className="button-text">Gustavo Andrade's<br />portfolio</p>
           <div className="display-flex">
-            <a target="blank_" href="https://github.com/deustavo" style={{ marginRight: 12 }}>
-              <p className="button-text">GITHUB</p>
+            <a target="blank_" href="https://github.com/deustavo" style={{ marginRight: 18 }}>
+              <p className="button-text"><i className="fab fa-github"></i></p>
             </a>
-            <a target="blank_" href="https://dribbble.com/Deustavo" style={{ marginRight: 12 }}>
-              <p className="button-text">DRIBBBLE</p>
+            <a target="blank_" href="https://dribbble.com/Deustavo" style={{ marginRight: 18 }}>
+              <p className="button-text"><i className="fab fa-dribbble"></i></p>
             </a>
             <a target="blank_" href="https://www.linkedin.com/in/deustavo/">
-              <p className="button-text">LINKEDIN</p>
+              <p className="button-text"><i className="fab fa-linkedin-in"></i></p>
             </a>
           </div>
         </div>

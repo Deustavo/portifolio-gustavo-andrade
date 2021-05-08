@@ -1,8 +1,13 @@
+.marginTop { margin-top: 120px }
+
 .capaProduct {
     width: 60vw;
+    max-height: 28.5vw;
     margin: 0px 0 44px 0;
     box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
     border-radius: 12px;
+    object-fit: cover;
+    object-position: top;
 }
 
 .paragraph {
@@ -18,11 +23,16 @@
 }
 
 @media only screen and (max-width: 1024px) {
-    .capaProduct { width: 90vw }
+    .capaProduct { width: 90vw; max-height: 430px; }
     .creditCardImage { width: 48vw }
 }
 
 
 @media only screen and (max-width: 864px) {
     .creditCardImage { display: none; }
+    .paragraph { font-size: 16px;}
+}
+
+@media only screen and (max-width: 450px) {
+    .marginTop { margin-top: 100px }
 }
