@@ -30,3 +30,7 @@
     transition: ease-in-out all 900ms;
     position: absolute;
 }
+
+.container { 
+    color: var(--background-color-2)
+}

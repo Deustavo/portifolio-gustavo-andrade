@@ -2,7 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
 
 :root {
-  --primary-color: rgb(247, 33, 218);
+  --primary-color: #24EB74;
+  --background-color-1: #1A0413;
+  --background-color-2: #1F0517;
 }
 
 /* TAGS INICIAIS */
@@ -27,7 +29,7 @@ a, * {
 
 /* TELA INICIAL */
 .backgound-page {
-  background-color: #000;
+  background-color: var(--background-color-1);
   min-height: 100vh;
   min-width: 100vw;
   color: #fff;
@@ -41,7 +43,7 @@ a, * {
   padding: 28px 0;
   position: fixed;
   width: 100vw;
-  background-color: #000;
+  background-color: var(--background-color-2);
   transition: all ease-in-out 300ms;
   z-index: 1;
 }
@@ -53,7 +55,7 @@ a, * {
 }
 
 .enterprise-name {
-  color: #fff !important;
+  color: #fff ;
   opacity: 0;
   font-weight: bold;
   font-size: 200px;
