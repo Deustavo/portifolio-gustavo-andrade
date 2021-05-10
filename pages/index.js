@@ -63,19 +63,19 @@ function LandingPage() {
           <div id="landing-content">
             
             <div className="margin-page display-flex">
-              {['U', 'X'].map((letter, index) => <> { letter === 'space' ? <div style={{width: 64}} /> : <p className="enterprise-name" style={{animationDelay: `${index}00ms`}}>{letter}</p> }</> )}
+              {['U', 'X', 'space', '&', 'space', 'U', 'I'].map((letter, index) => <div key={index}> { letter === 'space' ? <div style={{width: '4vw'}} /> : <p className="enterprise-name" style={{animationDelay: `${index}00ms`}}>{letter}</p> }</div> )}
             </div>
             <div className="margin-page display-flex">
-              {['D', 'E', 'S', 'I', 'G', 'N', 'E', 'R'].map((letter, index) => <> { letter === 'space' ? <div style={{width: 64}} /> : <p className="enterprise-name" style={{animationDelay: `${index}00ms`}}>{letter}</p> }</> )}
+              {['D', 'E', 'S', 'I', 'G', 'N', 'E', 'R'].map((letter, index) => <div key={index}> { letter === 'space' ? <div style={{width: '4vw'}} /> : <p className="enterprise-name" style={{animationDelay: `${index}00ms`}}>{letter}</p> }</div> )}
             </div>
 
             <div className="list-all-projects margin-page">
               <div className="row-projects">
                 {projects.map((project, index) =>
-                    <div key={index}div className="project-card" style={{animationDelay: `0.${index}s`}}>
-                      <img src={project.image} onClick={() => { scrollToTop(); setSelectedProject(project); setTimeout(() => document.getElementById('landing-content').style.display = "none", 900 )}}/>
-                      <p className="project-title">{project.title}</p>
-                    </div>
+                  <div key={index}div className="project-card" style={{animationDelay: `0.${index}s`}}>
+                    <img src={project.image} onClick={() => { scrollToTop(); setSelectedProject(project); setTimeout(() => document.getElementById('landing-content').style.display = "none", 900 )}}/>
+                    <p className="project-title">{project.title}</p>
+                  </div>
                 )}
               </div>
             </div>
