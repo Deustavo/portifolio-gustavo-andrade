@@ -43,10 +43,9 @@ a, * {
 }
 
 @keyframes onLoadName {
-  0% { padding-right: 2vw }
-  40% { padding-right: 1px }
-  70% { padding-right: 16px }
-  100% { padding-right: 12px; ; opacity: 1; }
+  0% { padding-right: 0vw }
+  50% { padding-right: 4vw }
+  100% { padding-right: 2vw; ; opacity: 1; }
 }
 
 .enterprise-name {
@@ -55,7 +54,7 @@ a, * {
   font-weight: bold;
   font-size: 200px;
   height: 214px;
-  padding-right: 2vw !important;
+  padding-right: 2vw;
   transition: all ease-in-out 300ms;
   animation: onLoadName 900ms forwards;
   cursor: context-menu;
@@ -115,6 +114,7 @@ a, * {
   display: flex;
   align-items: center;
   position: fixed;
+  top: 82px;
   background: #fff;
   width: 100vw;
   transition: all ease-in-out 300ms;

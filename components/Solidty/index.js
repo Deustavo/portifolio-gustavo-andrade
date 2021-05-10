@@ -17,7 +17,7 @@ function Solidty({setModalImageIsOpen}) {
       <h1>Personas</h1>
       <p className={styles.paragraph}>Em breve.</p>
       <h1>Resultado</h1>
-      <p className={styles.paragraph}>Em breve.</p>
+      <img className={styles.capaProduct} src="./img/solidty/result.png" />
     </div>
   );
 }

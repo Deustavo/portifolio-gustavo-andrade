@@ -24,7 +24,7 @@ function ProjectPage({project, setSelectedProject}) {
               <h1>{project.title}</h1>
             </div>
             <a target="_blank" href={project.site} style={{ display: project.site ? 'block' : 'none'}}>
-              <i className="fas fa-external-link-alt button-text" style={{fontSize: 24}}/>
+              <i className="fas fa-external-link-alt button-text" style={{fontSize: 20}}/>
             </a>
           </div>
 
