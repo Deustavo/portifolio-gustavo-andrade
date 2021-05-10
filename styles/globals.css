@@ -55,15 +55,10 @@ a, * {
   font-weight: bold;
   font-size: 200px;
   height: 214px;
-  padding-right: 12px;
+  padding-right: 2vw !important;
   transition: all ease-in-out 300ms;
   animation: onLoadName 900ms forwards;
   cursor: context-menu;
-}
-
-.enterprise-name:hover {
-  color: rgb(15, 158, 165);
-  padding-right: 24px;
 }
 
 .second-name { font-size: 194px !important }
