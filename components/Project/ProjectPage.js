@@ -18,9 +18,14 @@ function ProjectPage({project, setSelectedProject}) {
   return (
       <div className={`width-full ${close ? "close-animation" : ""}`} style={{ position: 'absolute'}}>
         <div className="container width-full ">
-          <div className="header-projects margin-product-page" id="header-projects">
-            <p className="button-text" onClick={() =>{ setClose(true), setTimeout(() => closeProductPage(), 300)}} style={{ fontSize: 36, margin: '-12px 16px 0 0' }}>&larr;</p>
-            <h1>{project.title}</h1>
+          <div className="header-projects margin-product-page justfy-content-between" id="header-projects">
+            <div className="display-flex align-items-center">
+              <p className="button-text" onClick={() =>{ setClose(true), setTimeout(() => closeProductPage(), 300)}} style={{ fontSize: 36, margin: '-12px 16px 0 0' }}>&larr;</p>
+              <h1>{project.title}</h1>
+            </div>
+            <a target="_blank" href={project.site} style={{ display: project.site ? 'block' : 'none'}}>
+              <i className="fas fa-external-link-alt button-text" style={{fontSize: 24}}/>
+            </a>
           </div>
 
           <div className="margin-top-product-page">
