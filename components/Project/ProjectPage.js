@@ -20,11 +20,12 @@ function ProjectPage({project, setSelectedProject}) {
         <div className="container width-full ">
           <div className="header-projects margin-product-page justfy-content-between" id="header-projects">
             <div className="display-flex align-items-center">
-              <p className="button-text" onClick={() =>{ setClose(true), setTimeout(() => closeProductPage(), 300)}} style={{ fontSize: 36, margin: '-12px 16px 0 0' }}>&larr;</p>
+              <p className="button-text" onClick={() =>{ setClose(true), setTimeout(() => closeProductPage(), 300)}} style={{ fontSize: 36, margin: '-4px 12px 0px 0px' }}>&larr;</p>
               <h1>{project.title}</h1>
             </div>
-            <a target="_blank" href={project.site} style={{ display: project.site ? 'block' : 'none'}}>
+            <a target="_blank" href={project.site} style={{ display: project.site ? 'block' : 'none', textAlign: 'center' }}>
               <i className="fas fa-external-link-alt button-text" style={{fontSize: 20}}/>
+              <p style={{ fontSize: 14 }}>Solução</p>
             </a>
           </div>
 
