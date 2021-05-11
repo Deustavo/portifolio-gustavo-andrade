@@ -19,7 +19,8 @@ function LandingPage() {
       let currentScrollPos = window.pageYOffset;
       if (prevScrollpos > currentScrollPos) {
         setHideHeader(false);
-        try { document.getElementById("header-projects").style.top = "82px" } catch { }
+        console.log(window.innerWidth)
+        try { document.getElementById("header-projects").style.top = window.innerWidth >= 450 ? "82px" : "77px" } catch { }
       } else {
         setHideHeader(true);
         try { document.getElementById("header-projects").style.top = "0px" } catch { }

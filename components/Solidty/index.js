@@ -6,7 +6,7 @@ function Solidty({setModalImageIsOpen}) {
   return (
     <div className="width-full display-flex flex-direction-column margin-product-page">
       <h1>Uma nova solução de banco digital</h1>
-      <p className={styles.paragraph}><i>Solidty Bank</i> é um banco digital que foi desenvolvido como <i>case</i> durante um curso de React JS e React Native oferecido pela <a target="_blank" href="https://www.gama.academy/"><b>Gama Academy</b></a> em parceria com a <a target="_blank" href="https://www.accenture.com/br-pt?c=acn_glb_brandexpressiongoogle_11608449&n=psgs_1020&gclsrc=ds"><b>Accenture</b></a>.</p>
+      <p className={styles.paragraph}><i>Solidty Bank</i> é um banco digital que foi desenvolvido como <i>case</i> durante um curso de React JS e React Native oferecido pela <a target="_blank" href="https://www.gama.academy/"><b style={{ color: "var(--primary-color)" }}>Gama Academy</b></a> em parceria com a <a target="_blank" href="https://www.accenture.com/br-pt?c=acn_glb_brandexpressiongoogle_11608449&n=psgs_1020&gclsrc=ds"><b style={{ color: "var(--primary-color)" }}>Accenture</b></a>.</p>
       <img className={styles.capaProduct} src="./img/solidty/wireframe.png" />
       <p className={styles.paragraph}>Sua interface foi desenvolvida com o objetivo de fornecer ao usuário acesso a <i>dashboard</i> de um banco digital de forma intuitiva e com fluxo de páginas fluido.</p>
       <h1>O problema</h1>

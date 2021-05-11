@@ -1,17 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap');
 
 :root {
   --primary-color: #24EB74;
-  --background-color-1: #1A0413;
-  --background-color-2: #1F0517;
+  --background-color-1: #031114;
+  --background-color-2: #051A1F;
+  --primary-font:'Patua One', cursive;
+  --secondary-font: 'Nanum Myeongjo', serif;
 }
 
 /* TAGS INICIAIS */
 html, body, p {
   padding: 0;
   margin: 0;
-  font-family: 'Anton', sans-serif;
+  font-family: var(--primary-font);
   scroll-behavior: smooth;
 }
 
@@ -51,16 +53,16 @@ a, * {
 @keyframes onLoadName {
   0% { padding-right: 0vw }
   50% { padding-right: 4vw }
-  100% { padding-right: 2vw; ; opacity: 1; }
+  100% { padding-right: 1vw; ; opacity: 1; }
 }
 
 .enterprise-name {
   color: #fff ;
   opacity: 0;
   font-weight: bold;
-  font-size: 200px;
+  font-size: 160px;
   height: 214px;
-  padding-right: 2vw;
+  padding-right: 1vw;
   transition: all ease-in-out 300ms;
   animation: onLoadName 900ms forwards;
   cursor: context-menu;
@@ -68,7 +70,7 @@ a, * {
 
 .second-name { font-size: 194px !important }
 
-.list-all-projects { margin-top: 80px }
+.list-all-projects { margin-top: 40px }
 
 .margin-top-product-page { margin-top: 80px }
 
@@ -143,7 +145,7 @@ a, * {
 }
 
 @media only screen and (max-width: 864px) {
-  .enterprise-name { font-size: 100px; height: 100px; }
+  .enterprise-name { font-size: 88px; height: 100px; }
   .second-name { font-size: 98px !important }
   .project-card { height: 43.5vw; width: 43.5vw; }
   .project-card img { height: 43.5vw; width: 43.5vw; }
@@ -156,7 +158,6 @@ a, * {
   .second-name { font-size: 48px !important }
   .project-title { font-size: 20px }
   .header { font-size: 12px }
-  .header-projects { top: 77px !important}
   .margin-top-product-page { margin-top: 60px }
   .button-text i { font-size: 20px }
   h1 { font-size: 22px }
