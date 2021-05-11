@@ -61,7 +61,7 @@ a, * {
   opacity: 0;
   font-weight: bold;
   font-size: 160px;
-  height: 214px;
+  height: 160px;
   padding-right: 1vw;
   transition: all ease-in-out 300ms;
   animation: onLoadName 900ms forwards;
@@ -70,7 +70,7 @@ a, * {
 
 .second-name { font-size: 194px !important }
 
-.list-all-projects { margin-top: 40px }
+.list-all-projects { margin-top: 80px }
 
 .margin-top-product-page { margin-top: 80px }
 
