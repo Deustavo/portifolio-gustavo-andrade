@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-import Solidty from '../Solidty';
-import Skillus from '../Skillus';
-import LifeGuard from '../LifeGuard';
-import DanielAraujo from '../DanielAraujo';
+import Solidty from './Solidty';
+import Skillus from './Skillus';
+import LifeGuard from './LifeGuard';
+import DanielAraujo from './DanielAraujo';
 import styles from './modal.module.css';
 
 function ProjectPage({project, setSelectedProject}) {

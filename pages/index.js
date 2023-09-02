@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
-
-import ProjectPage from '../components/Project/ProjectPage';
 import { projects } from './api/projects';
 
 function LandingPage() {
@@ -59,7 +57,6 @@ function LandingPage() {
 
 
         <div style={{padding: '100px 0 100px 0'}}>
-          {selectedProject === false ? '' : <ProjectPage project={selectedProject} setSelectedProject={setSelectedProject} />}
           <div id="landing-content">
             
             <div className="margin-page display-flex">
@@ -75,7 +72,14 @@ function LandingPage() {
               <div className="row-projects">
                 {projects.map((project, index) =>
                   <div key={index}div className="project-card" style={{animationDelay: `0.${index}s`}}>
-                    <img src={project.image} onClick={() => { scrollToTop(); setSelectedProject(project); setTimeout(() => document.getElementById('landing-content').style.display = "none", 900 )}}/>
+                    <img src={project.image} onClick={() => {
+                      scrollToTop();
+                      setSelectedProject(project);
+                      setTimeout(() => {
+                        document.getElementById('landing-content')
+                          .style.display = "none", 900
+                      })
+                    }}/>
                     <p className="project-title">{project.title}</p>
                   </div>
                 )}
