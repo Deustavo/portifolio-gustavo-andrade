@@ -12,6 +12,10 @@ function LandingPage() {
     document.documentElement.scrollTop = 0;
   }
 
+  function animationCloseIndex() {
+    document.getElementsByClassName("backgound-page")[0].classList.add("animation-close-index");
+  }
+
   return (
     <div>
       <Head>
@@ -38,6 +42,7 @@ function LandingPage() {
                   <div key={index} className="project-card" style={{animationDelay: `0.${index}s`}}>
                     <img src={project.image} onClick={() => {
                       scrollToTop();
+                      animationCloseIndex();
                       setTimeout(() => {
                         router.push(`/project/${project.slug}`);
                       }, 900);
