@@ -1,8 +1,22 @@
-@keyframes closeProject {
+.project-page {
+    height: 100vh;
+}
+
+@keyframes closeProjectPageContent {
     0% { top: 0px }
     100% { top: -100vw; opacity: 0; }
 }
 
+@keyframes closeProjectBackground {
+    0% { background-color: #fff }
+    100% { background-color: var(--background-color-1); }
+}
+
+.close-animation .project-page, .close-animation .header-projects {
+    animation: closeProjectBackground 600ms;
+    
+}
+
 .close-animation .container {
-    animation: closeProject 600ms;
+    animation: closeProjectPageContent 600ms;
 }
