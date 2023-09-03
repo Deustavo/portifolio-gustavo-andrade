@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/router'
 
 function Header() {
+  const router = useRouter();
   const [hideHeader, setHideHeader] = useState(false);
 
   useEffect(() => {
@@ -24,7 +26,7 @@ function Header() {
 
   return (
     <div className="header margin-page" style={{ marginTop: hideHeader ? '-100px' : 0 }}>
-      <p onClick={() => window.location.reload()} className="button-text">Gustavo Andrade</p>
+      <p onClick={() => router.push("/")} className="button-text">Gustavo Andrade</p>
       <div className="display-flex">
         <a target="blank_" href="https://github.com/deustavo" style={{ marginRight: 18 }}>
           <p className="button-text"><i className="fab fa-github"></i></p>

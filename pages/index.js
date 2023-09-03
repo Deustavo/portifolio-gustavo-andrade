@@ -13,11 +13,11 @@ function LandingPage() {
   }
 
   function animationCloseIndex() {
-    document.getElementsByClassName("backgound-page")[0].classList.add("animation-close-index");
+    document.getElementById("home-page").classList.add("animation-close-index");
   }
 
   return (
-    <div>
+    <div id="home-page">
       <Head>
         <title>Gustavo Andrade's portfolio</title>
       </Head>

@@ -7,9 +7,8 @@ import LifeGuard from './LifeGuard';
 import DanielAraujo from './DanielAraujo';
 import styles from './modal.module.css';
 
-function ProjectPage({project, setSelectedProject}) {
+function ProjectPage({project, setSelectedProject, setCloseProject}) {
   const router = useRouter();
-  const [close, setClose] = useState(false);
   const [modalImageIsOpen, setModalImageIsOpen] = useState(false);
 
   function closeProductPage() {
@@ -22,11 +21,17 @@ function ProjectPage({project, setSelectedProject}) {
   }
 
   return (
-      <div className={`width-full ${close ? "close-animation" : ""}`} style={{ position: 'absolute'}}>
+      <div className='width-full' style={{ position: 'absolute'}}>
         <div className="container width-full ">
           <div className="header-projects margin-product-page justfy-content-between" id="header-projects">
             <div className="display-flex align-items-center">
-              <p className="button-text" onClick={() =>{ setClose(true), setTimeout(() => closeProductPage(), 300)}} style={{ fontSize: 36, margin: '-4px 12px 0px 0px' }}>&larr;</p>
+              <p
+                className="button-text"
+                onClick={() =>{ setCloseProject(true), setTimeout(() => closeProductPage(), 400)}}
+                style={{ fontSize: 36, margin: '-8px 12px 0px 0px' }}
+              >
+                <i class="fa-solid fa-arrow-left"></i>
+              </p>
               <h1>{project.title}</h1>
             </div>
             <a target="_blank" href={project.site} style={{ display: project.site ? 'block' : 'none', textAlign: 'center' }}>
