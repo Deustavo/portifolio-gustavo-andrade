@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useRouter } from 'next/router'
 
 import Solidty from './Solidty';
 import Skillus from './Skillus';
@@ -7,12 +8,17 @@ import DanielAraujo from './DanielAraujo';
 import styles from './modal.module.css';
 
 function ProjectPage({project, setSelectedProject}) {
+  const router = useRouter();
   const [close, setClose] = useState(false);
   const [modalImageIsOpen, setModalImageIsOpen] = useState(false);
 
   function closeProductPage() {
-    setSelectedProject(false)
-    document.getElementById('landing-content').style.display = "block"
+    setSelectedProject(false);
+    router.push(`/`);
+  }
+
+  if (!project) {
+    return <div />;
   }
 
   return (

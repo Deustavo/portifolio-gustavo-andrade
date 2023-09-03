@@ -1,38 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
+import { useRouter } from 'next/router'
 import { projects } from './api/projects';
+import Header from '../components/Header';
 
 function LandingPage() {
-  const [hideHeader, setHideHeader] = useState(false);
-  const [selectedProject, setSelectedProject] = useState(false);
+  const router = useRouter();
 
   function scrollToTop() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
 
-  function animationHeader() {
-    let prevScrollpos = window.pageYOffset;
-    window.onscroll = function() {
-      let currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos) {
-        setHideHeader(false);
-        try { document.getElementById("header-projects").style.top = window.innerWidth >= 450 ? "82px" : "77px" } catch { }
-      } else {
-        setHideHeader(true);
-        try { document.getElementById("header-projects").style.top = "0px" } catch { }
-      }
-      prevScrollpos = currentScrollPos;
-    }
-  }
-
-  useEffect(() => {
-    animationHeader();
-  }, []);
-
   return (
-    
-    <div className={selectedProject !== false ? 'project-page': ''}>
+    <div>
       <Head>
         <title>Gustavo Andrade's portfolio</title>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossOrigin="anonymous" />
@@ -40,22 +21,7 @@ function LandingPage() {
 
 
       <div className="backgound-page">
-        <div className="header margin-page" style={{ marginTop: hideHeader ? '-100px' : 0 }}>
-          <p onClick={() => window.location.reload()} className="button-text">Gustavo Andrade</p>
-          <div className="display-flex">
-            <a target="blank_" href="https://github.com/deustavo" style={{ marginRight: 18 }}>
-              <p className="button-text"><i className="fab fa-github"></i></p>
-            </a>
-            <a target="blank_" href="https://dribbble.com/Deustavo" style={{ marginRight: 18 }}>
-              <p className="button-text"><i className="fab fa-dribbble"></i></p>
-            </a>
-            <a target="blank_" href="https://www.linkedin.com/in/deustavo/">
-              <p className="button-text"><i className="fab fa-linkedin-in"></i></p>
-            </a>
-          </div>
-        </div>
-
-
+        <Header />
         <div style={{padding: '100px 0 100px 0'}}>
           <div id="landing-content">
             
@@ -71,14 +37,12 @@ function LandingPage() {
             <div className="list-all-projects margin-page">
               <div className="row-projects">
                 {projects.map((project, index) =>
-                  <div key={index}div className="project-card" style={{animationDelay: `0.${index}s`}}>
+                  <div key={index} className="project-card" style={{animationDelay: `0.${index}s`}}>
                     <img src={project.image} onClick={() => {
                       scrollToTop();
-                      setSelectedProject(project);
                       setTimeout(() => {
-                        document.getElementById('landing-content')
-                          .style.display = "none", 900
-                      })
+                        router.push(`/project/${project.slug}`);
+                      }, 900);
                     }}/>
                     <p className="project-title">{project.title}</p>
                   </div>
