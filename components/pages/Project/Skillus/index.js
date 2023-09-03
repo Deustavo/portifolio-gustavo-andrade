@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from '../../../styles/product-page.module.css';
+import styles from '../product-page.module.css';
 
 function Skillus() {
   return (

@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router'
 import Head from 'next/head';
-import Project from '../../components/Project/ProjectPage';
+import Project from '../../components/pages/Project';
 import { projects } from '../api/projects';
 import Header from '../../components/Header';
 
