@@ -1,4 +1,5 @@
 import Presentation from "./Presentation";
+import About from "./About";
 import Projects from "./Projects";
 
 export default function Home() {
@@ -8,7 +9,10 @@ export default function Home() {
       
         <Presentation />
 
+        <About />
+
         <Projects />
+
       </div>
     </div>
   )

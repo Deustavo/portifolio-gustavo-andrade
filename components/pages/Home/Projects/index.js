@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
 import { projects } from '../../../../pages/api/projects';
+import styles from "../home-page.module.css";
 
 export default function Projects() {
   const router = useRouter();
@@ -15,6 +16,7 @@ export default function Projects() {
 
   return(
     <div className="list-all-projects margin-page">
+      <h2 className={styles.showcase__title}>Projetos</h2>
       <div className="row-projects">
         {projects.map((project, index) =>
           <div key={index} className="project-card" style={{animationDelay: `0.${index}s`}}>

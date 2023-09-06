@@ -1,0 +1,25 @@
+
+#blob {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  /* background: #24ebdb; */
+  /* animation: blobanimate 5s infinite linear forwards; */
+  position: fixed;
+  cursor: pointer;
+  pointer-events: none;
+  transition: 200ms linear;
+  box-shadow: 0px 0px 10px 10px #24ebdb3b;
+}
+
+@keyframes blobanimate {
+  0% {
+    transform: rotate(0deg) scaley(100%);
+  }
+  50% {
+    transform: rotate(180deg) scaley(70%);
+  }
+  100% {
+    transform: rotate(360deg) scaley(100%);
+  }
+}

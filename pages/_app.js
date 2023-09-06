@@ -1,6 +1,8 @@
+
 import '../styles/globals.css';
 import '../styles/animation-open-project.css';
 import '../styles/animation-close-project.css';
+import '../styles/custom-cursor.css';
 
 function MyApp({ Component, pageProps }) {
   return <>
