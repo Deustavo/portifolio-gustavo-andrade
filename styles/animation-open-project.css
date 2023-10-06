@@ -1,4 +1,4 @@
-.animation-close-index .backgound-page {
+.animation-close-index .background-page {
     background-color: #fff;
     color: #000;
 }
@@ -31,6 +31,6 @@
     position: absolute;
 }
 
-.container { 
+.container {
     color: var(--background-color-1)
 }

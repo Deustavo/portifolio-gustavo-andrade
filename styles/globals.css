@@ -30,7 +30,7 @@ a, * {
 }
 
 /* TELA INICIAL */
-.backgound-page {
+.background-page {
   background-color: var(--background-color-1);
   min-height: 100vh;
   min-width: 100vw;
@@ -141,7 +141,7 @@ a, * {
 
 /* CLASSES RESPONSIVAS */
 @media only screen and (max-width: 1024px) {
-  .margin-product-page { padding-left: 5vw; padding-right: 5vw; }  
+  .margin-product-page { padding-left: 5vw; padding-right: 5vw; }
 }
 
 @media only screen and (max-width: 864px) {

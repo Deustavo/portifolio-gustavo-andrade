@@ -22,18 +22,73 @@ function LandingPage() {
         <title>Gustavo Andrade's portfolio</title>
       </Head>
 
-      <main className="backgound-page">
+      <main className="background-page">
         <Header />
         <div style={{padding: '100px 0 100px 0'}}>
           <div id="landing-content">
-            
-            <div className="margin-page display-flex">
-              {['U', 'X'].map((letter, index) => <div key={index}> { letter === 'space' ? <div style={{width: '4vw'}} /> : <p className="enterprise-name" style={{animationDelay: `${index}00ms`, color: "var(--primary-color)"}}>{letter}</p> }</div> )}
-              {['space', '&', 'space'].map((letter, index) => <div key={index}> { letter === 'space' ? <div style={{width: '4vw'}} /> : <p className="enterprise-name" style={{animationDelay: `${index}00ms`}}>{letter}</p> }</div> )}
-              {['U', 'I'].map((letter, index) => <div key={index}> { letter === 'space' ? <div style={{width: '4vw'}} /> : <p className="enterprise-name" style={{animationDelay: `${index}00ms`, color: "var(--primary-color)"}}>{letter}</p> }</div> )}
+
+          <div className="margin-page display-flex">
+              {['G', 'U', 'S', 'T', 'A', 'V', 'O'].map((letter, index) =>
+                <div key={index}>
+                  <p
+                    className="enterprise-name"
+                    style={{animationDelay: `${index}00ms`}}
+                  >
+                    { letter }
+                  </p>
+                </div>
+              )}
             </div>
+
             <div className="margin-page display-flex">
-              {['D', 'E', 'S', 'I', 'G', 'N', 'E', 'R'].map((letter, index) => <div key={index}> { letter === 'space' ? <div style={{width: '4vw'}} /> : <p className="enterprise-name" style={{animationDelay: `${index}00ms`}}>{letter}</p> }</div> )}
+              {['A', 'N', 'D', 'R', 'A', 'D', 'E'].map((letter, index) =>
+                <div key={index}>
+                  <p
+                    className="enterprise-name"
+                    style={{animationDelay: `${index}00ms`}}
+                  >
+                    { letter }
+                  </p>
+                </div>
+              )}
+            </div>
+
+            <div className="margin-page display-flex">
+              {['U', 'X'].map((letter, index) =>
+                <div key={index}>
+                  <p
+                    className="enterprise-name"
+                    style={{animationDelay: `${index}00ms`, color: "var(--primary-color)"}}
+                  >
+                    { letter }
+                  </p>
+                </div>
+              )}
+              {['space', '&', 'space'].map((letter, index) =>
+                <div key={index}>
+                  { letter === 'space' ?
+                    <div style={{width: '4vw'}} />
+                    :
+                    <p
+                      className="enterprise-name"
+                      style={{animationDelay: `${index}00ms`}}
+                    >
+                      { letter }
+                    </p>
+                  }
+                </div>
+              )}
+
+              {['U', 'I'].map((letter, index) =>
+                <div key={index}>
+                  <p
+                    className="enterprise-name"
+                    style={{animationDelay: `${index}00ms`, color: "var(--primary-color)"}}
+                  >
+                    { letter }
+                  </p>
+                </div>
+              )}
             </div>
 
             <div className="list-all-projects margin-page">
