@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@900&display=swap');
 
 :root {
   --primary-color: #24ebdb;
@@ -57,15 +58,19 @@ a, * {
 }
 
 .enterprise-name {
+  /* font-family: 'Jost', sans-serif; */
   color: #fff ;
   opacity: 0;
   font-weight: bold;
   font-size: 160px;
-  height: 160px;
   padding-right: 1vw;
   transition: all ease-in-out 300ms;
   animation: onLoadName 900ms forwards;
   cursor: context-menu;
+}
+
+.enterprise-name-sm {
+  font-size: 74px;
 }
 
 .second-name { font-size: 194px !important }
@@ -141,11 +146,12 @@ a, * {
 
 /* CLASSES RESPONSIVAS */
 @media only screen and (max-width: 1024px) {
-  .margin-product-page { padding-left: 5vw; padding-right: 5vw; }  
+  .margin-product-page { padding-left: 5vw; padding-right: 5vw; }
 }
 
 @media only screen and (max-width: 864px) {
   .enterprise-name { font-size: 88px; height: 100px; }
+  .enterprise-name-sm { font-size: 88px; height: 100px; }
   .second-name { font-size: 98px !important }
   .project-card { height: 43.5vw; width: 43.5vw; }
   .project-card img { height: 43.5vw; width: 43.5vw; }
