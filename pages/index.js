@@ -1,21 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
-import { useRouter } from 'next/router'
-import { projects } from './api/projects';
 import Header from '../components/Header';
+import Presentation from '../components/Home/Presentation/main';
+import Projects from '../components/Home/Projects/main';
+import About from '../components/Home/About/main';
 
 function LandingPage() {
-  const router = useRouter();
-
-  function scrollToTop() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
-
-  function animationCloseIndex() {
-    document.getElementById("home-page").classList.add("animation-close-index");
-  }
-
   return (
     <div id="home-page">
       <Head>
@@ -27,86 +17,12 @@ function LandingPage() {
         <div style={{padding: '100px 0 100px 0'}}>
           <div id="landing-content">
 
-          <div className="margin-page display-flex">
-              {['G', 'U', 'S', 'T', 'A', 'V', 'O'].map((letter, index) =>
-                <div key={index}>
-                  <p
-                    className="enterprise-name"
-                    style={{animationDelay: `${index}00ms`}}
-                  >
-                    { letter }
-                  </p>
-                </div>
-              )}
-            </div>
+            <Presentation />
 
-            <div className="margin-page display-flex">
-              {['A', 'N', 'D', 'R', 'A', 'D', 'E'].map((letter, index) =>
-                <div key={index}>
-                  <p
-                    className="enterprise-name"
-                    style={{animationDelay: `${index}00ms`}}
-                  >
-                    { letter }
-                  </p>
-                </div>
-              )}
-            </div>
+            <About />
 
-            <div className="margin-page display-flex">
-              {['U', 'X'].map((letter, index) =>
-                <div key={index}>
-                  <p
-                    className="enterprise-name"
-                    style={{animationDelay: `${index}00ms`, color: "var(--primary-color)"}}
-                  >
-                    { letter }
-                  </p>
-                </div>
-              )}
-              {['space', '&', 'space'].map((letter, index) =>
-                <div key={index}>
-                  { letter === 'space' ?
-                    <div style={{width: '4vw'}} />
-                    :
-                    <p
-                      className="enterprise-name"
-                      style={{animationDelay: `${index}00ms`}}
-                    >
-                      { letter }
-                    </p>
-                  }
-                </div>
-              )}
+            <Projects />
 
-              {['U', 'I'].map((letter, index) =>
-                <div key={index}>
-                  <p
-                    className="enterprise-name"
-                    style={{animationDelay: `${index}00ms`, color: "var(--primary-color)"}}
-                  >
-                    { letter }
-                  </p>
-                </div>
-              )}
-            </div>
-
-            <div className="list-all-projects margin-page">
-              <div className="row-projects">
-                {projects.map((project, index) =>
-                  <div key={index} className="project-card" style={{animationDelay: `0.${index}s`}}>
-                    <img src={project.image} onClick={() => {
-                      scrollToTop();
-                      animationCloseIndex();
-                      setTimeout(() => {
-                        router.push(`/project/${project.slug}`);
-                      }, 900);
-                    }}/>
-                    <p className="project-title">{project.title}</p>
-                  </div>
-                )}
-              </div>
-            </div>
           </div>
         </div>
       </main>

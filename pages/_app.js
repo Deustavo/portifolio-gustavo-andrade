@@ -1,6 +1,4 @@
-import '../styles/globals.css';
-import '../styles/animation-open-project.css';
-import '../styles/animation-close-project.css';
+import '../styles/main.scss';
 
 function MyApp({ Component, pageProps }) {
   return <>
