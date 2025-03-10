@@ -14,8 +14,8 @@ function Solidty({setModalImageIsOpen}) {
         <img className={styles.creditCardImage} src="/img/solidty/creditCard.png"/>
         <p className={styles.paragraph}>É um desafio para os bancos que estão a mais tempo no mercado se atualizarem para ter interfaces modernas e com boa usabilidade. É necessario que uma interface tenha estudos de UI e UX para obter um crescimento escalar em seu negócio e seus usuários tenham um número reduzido de problemas durante o uso.</p>
       </div>
-      <h1>Personas</h1>
-      <p className={styles.paragraph}>Em breve.</p>
+      {/* <h1>Personas</h1> */}
+      {/* <p className={styles.paragraph}>Em breve.</p> */}
       <h1>Resultado</h1>
       <img className={styles.capaProduct} src="/img/solidty/result.png" />
     </div>
