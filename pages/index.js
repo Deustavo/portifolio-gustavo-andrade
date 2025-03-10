@@ -19,7 +19,7 @@ function LandingPage() {
 
             <Presentation />
 
-            <About />
+            {/* <About /> */}
 
             <Projects />
 
